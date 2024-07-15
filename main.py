@@ -14,16 +14,7 @@ st.set_page_config(page_title="Data Visualiser",
 # Title
 st.title("📊 Data Visualiser")
 
-# Getting the working directory of the main.py file
-working_dir = os.path.dirname(os.path.abspath(__file__))
-
-folder_path = f"{working_dir}/data"
-
-# List all the files present in data folder
-
-files_list = [f for f in os.listdir(folder_path) if f.endswith(".csv")]
-
-# Dropdown for all the files
+# File Uploader
 uploaded_file = st.file_uploader("Upload your CSV file", type=["csv"])
 
 if uploaded_file is not None:
